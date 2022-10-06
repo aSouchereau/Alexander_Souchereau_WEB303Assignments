@@ -1,20 +1,44 @@
 // WEB303 Assignment 2
 $(document).ready(function () {
-    $("#prospect").click(function (e) { 
-        let content = $("#content");
-        content.hide().text("");
-        content.load('prospect.html').fadeIn(600);
+    let content = $("#content");
+    let xhr = new XMLHttpRequest; 
+
+
+    $("#prospect").click(function () { 
+        content.hide().text("");  
+        xhr.open('GET', 'prospect.html', true);
+        xhr.onload = function () {
+            if(xhr.status >= 200 && xhr.status < 400)
+            {
+                content.html(xhr.responseText).fadeIn(600);
+            }
+        }
+        xhr.send();
     });
 
-    $("#convert").click(function (e) {
-        let content = $("#content");
+
+    $("#convert").click(function () {
         content.hide().text("");
-        content.load('convert.html').fadeIn(600);
+        xhr.open('GET', 'convert.html', true);
+        xhr.onload = function () {
+            if(xhr.status >= 200 && xhr.status < 400)
+            {
+                content.html(xhr.responseText).fadeIn(600);
+            }
+        }
+        xhr.send();
     });
 
-    $("#retain").click(function (e) {
-        let content = $("#content");
+
+    $("#retain").click(function () {
         content.hide().text("");
-        content.load('retain.html').fadeIn(600);
+        xhr.open('GET', 'retain.html', true);
+        xhr.onload = function () {
+            if(xhr.status >= 200 && xhr.status <400)
+            {
+                content.html(xhr.responseText).fadeIn(600);
+            }
+        }
+        xhr.send();
     });
 });
