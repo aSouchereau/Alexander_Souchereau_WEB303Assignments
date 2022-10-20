@@ -1,41 +1,34 @@
 /*
-	WEB 303 Assignment 1 - jQuery
-	Alexander Souchereau W0632604
+    Assignment #4
+    Alex Souchereau
 */
 
-$(document).ready(function () {
+$(function () {
+    // your code here
 
 
-	$('input#yearly-salary').add('input#percent').keyup(function (e) { 		// keyup event for both input boxes | keyup updates after each keystroke providing better user experience than change event
-		
-		// get user input from text box value
-		let $salary = $('input#yearly-salary').val();
-		let $percent = $('input#percent').val();	
-		
-		if (isNaN($salary) == false && isNaN($percent) == false) // User input must be a number
-		{
-			if($percent <= 100 && $percent >= 0) // Inputed percent must be between 0 and 100
-			{
-				let $mathResult = $salary * $percent / 100;
-				let $dollarAllowance = $mathResult.toFixed(2);
-				console.log($dollarAllowance);
-				$('span#amount').text('$' + $dollarAllowance);
-			}
-			else // Display error message and reset inputs
-			{
-				alert('Error: Cannot enter more than 100%');
-				$('input').val('');
-				$dollarAllowance = 0;
-				$('span#amount').text('$' + $dollarAllowance);
-			}
-		}
-		else
-		{
-			alert('Error: Input was not a number');
-			$('input').val('');
-			$dollarAllowance = 0;
-			$('span#amount').text('$' + $dollarAllowance);
-		}
 
-	});
+
+
+    // DO NOT EDIT ANY CODE IN THIS FUNCTION DEFINTION
+    // function to calculate the distance in metres between two lat/long pairs on Earth
+    // Haversine formula - https://en.wikipedia.org/wiki/Haversine_formula
+    // Aren't those cool variable names? Yah gotta love JavaScript
+    function calcDistanceBetweenPoints(lat1, lon1, lat2, lon2) {
+        var toRadians = function (num) {
+            return num * Math.PI / 180;
+        }
+        var R = 6371000; // radius of Earth in metres
+        var φ1 = toRadians(lat1);
+        var φ2 = toRadians(lat2);
+        var Δφ = toRadians(lat2 - lat1);
+        var Δλ = toRadians(lon2 - lon1);
+
+        var a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+        return (R * c);
+    }
 });
+
+
