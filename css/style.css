@@ -38,6 +38,11 @@ section {
     width: 100%;
 }
 
+#sources {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* Typography */
 h1 {
     font-size: 2em;

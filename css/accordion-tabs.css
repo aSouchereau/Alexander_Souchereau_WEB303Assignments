@@ -1,0 +1,71 @@
+.accordion, .tab-list {
+    list-style-type: none;
+    padding: 0;
+}
+.tab-list {
+    display: flex;
+}
+.tab-list li {
+    padding: 4px 10px;
+    margin-right: 10px;
+    background-color: #862632;
+}
+.tab-list li:hover {
+    background-color: darkslategrey;
+}
+.tab-list li a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab-panel {
+    background: lightgrey;
+}
+
+.tab-panel {
+    display: none;
+    padding: 2em 3em 10em;
+}
+.tab-panel.active {
+    display: block;
+}
+
+
+
+
+
+
+button.accordion-control {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+}
+
+
+.accordion-panel {
+    display: none;
+    padding: 10px;
+}
+
+.accordion button {
+    background: none;
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1.5em;
+}
+
+.accordion li {
+    margin: 1em 0;
+    border-radius: 25px;
+    border: 2px solid #144734;
+}
+.accordion li:hover {
+     background-color: #144734;
+    color: #ddcca1;
+     cursor: pointer;
+ }
+.accordion button {
+    color: inherit;
+}
