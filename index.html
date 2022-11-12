@@ -1,129 +1,30 @@
 <html>
 
 <head>
-    <title>Phil Kessel | Fan page</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/accordion-tabs.css">
     <link href="css/style.css" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="css/photoViewer.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Phil Kessel Fan Page</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#info">Info</a>
-                </li>
-                <li>
-                    <a href="#stats">Stats</a>
-                </li>
-                <li>
-                    <a href="#images">Images</a>
-                </li>
-                <li>
-                    <a href="#faq">FAQ</a>
-                </li>
-                <li>
-                    <a href="#sources">Sources</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="container">
-        <section id="hero">
-            <div class="img-container">
-                <img src="img/landscape-onIce-arizona(Gene%20J.%20PuskarAP).jpg" alt="Phil Kessel on the ice for the arizona coyotes">
-            </div>
-        </section>
-
-
-        <section id="info" class="tab-wrapper">
-            <h2>About Phil</h2>
-            <ul class="tab-list">
-                <li>
-                    <a class="tab-control" href="#tab1">Early Life</a>
-                </li>
-                <li>
-                    <a class="tab-control" href="#tab2">Career</a>
-                </li>
-                <li>
-                    <a class="tab-control" href="#tab3">Personal Life</a>
-                </li>
-            </ul>
-            <div class="tab-panel" id="tab1">
-                <p>Phil was born in Verona, Wisconsin USA, near Madison. His father was a quarterback at Northern Michigan University. He played youth hockey with the AAA Madison Capitols in his hometown of Madison, Wisconsin.</p>
-            </div>
-            <div class="tab-panel" id="tab2">
-                <p>On August 17, 2006, the Bruins announced that they had signed Kessel to a three-year, entry-level contract worth the rookie maximum of $850,000. On September 18, 2009, the Bruins traded Kessel to the Toronto Maple Leafs in exchange for a 2010 first-round pick (Tyler Seguin), a 2010 second-round pick (Jared Knight) and a 2011 first-round pick (Dougie Hamilton). </p>
-            </div>
-            <div class="tab-panel" id="tab3">
-                <p>Kessel's longtime girlfriend Sandra Pereira gave birth to their first child, daughter Kapri Mary Kessel, on March 9, 2022.</p>
-            </div>
-        </section>
-
-
-
-        <section id="faq" class="accordion-wrapper">
-            <h2>Frequently Asked Questions</h2>
-            <ul class="accordion acc1">
-                <li>
-                    <button class="accordion-control">What position does Phil play?</button>
-                    <div class="accordion-panel">
-                        <p>Phil plays Right Wing.</p>
-                    </div>
-                </li>
-                <li>
-                    <button class="accordion-control">What teams did Phil play for?</button>
-                    <div class="accordion-panel">
-                        <p>The Boston Bruins, Toronto Maple Leafs, Pittsburgh Penguins, Arizona Coyotes, and the Vegas Golden Knights.</p>
-                    </div>
-                </li>
-                <li>
-                    <button class="accordion-control">What is Phil's Height and Weight?</button>
-                    <div class="accordion-panel">
-                        <p>6' 0" and 223 lbs</p>
-                    </div>
-                </li>
-                <li>
-                    <button class="accordion-control">What is Phil's Middle Name?</button>
-                    <div class="accordion-panel">
-                        <p>Joseph.</p>
-                    </div>
-                </li>
-                <li>
-                    <button class="accordion-control">What number does Phil wear?</button>
-                    <div class="accordion-panel">
-                        <p>Number 81</p>
-                    </div>
-                </li>
-            </ul>
-
-        </section>
-        <section id="sources">
-            <div id="txt-sources">
-                <h4>Text Sources</h4>
-                <ol>
-                    <li><a href="https://www.channel3000.com/phil-kessel-traded-to-pittsburgh/">Phil Kessel Traded to Pittsburgh</a></li>
-                    <li><a href="https://www.sportsnet.ca/nhl/article/phil-kessel-pulls-off-quite-a-manouevre-to-keep-ironman-streak-alive/">Phil Kessel's New Family</a> </li>
-                    <li><a href="https://www.capfriendly.com/trades/players/phil-kessel">Phil Kessel Trade History</a> </li>
-                </ol>
-            </div>
-            <div id="img-sources">
-                <h4>Image Sources</h4>
-                <ol>
-                    <li>
-                        <a href="img/landscape-onIce-arizona(Gene%20J.%20PuskarAP).jpg">Image by Gene J. Puskar</a>
-                    </li>
-                    <li>
-                        <a href="img/phil-kessel-hot-dogs(Nathan%20Denette).jpg">Image by Nathan Denette</a>
-                    </li>
-                </ol>
-            </div>
-        </section>
-    </main>
+    <h1>Alex's Photo Gallery</h1>
+    <div id="photo-viewer">
+        <a href="#" class="photo-box is-loading"></a>
+        <div class="photo-thumbnails">
+            <a href="img/full-sized-photo-1.png" class="thumbnail-anchor active" title="photo 1">
+                <img src="img/thumbnail-photo-1.png" alt="thumbnail 1">
+            </a>
+            <a href="img/full-sized-photo-2.png" class="thumbnail-anchor" title="photo 2">
+                <img src="img/thumbnail-photo-2.png" alt="thumbnail 2">
+            </a>
+            <a href="img/full-sized-photo-3.png" class="thumbnail-anchor" title="photo 3">
+                <img src="img/thumbnail-photo-3.png" alt="thumbnail 3">
+            </a>
+            <a href="img/full-sized-photo-4.png" class="thumbnail-anchor" title="photo 4">
+                <img src="img/thumbnail-photo-4.png" alt="thumbnail 4">
+            </a>
+        </div>
+    </div>
+	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
