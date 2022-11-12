@@ -1,4 +1,10 @@
-#london-wrapper, #windsor-wrapper{
-    display: none;
-    height: 500px;
+html {
+    background: rgba(127, 166, 232, 0.5);
+}
+body {
+    width: 75%;
+    margin: 4em auto;
+    padding: 3em;
+    background: white;
+    box-shadow: rgb(255, 195, 102) 20px 20px 0;
 }

@@ -7,6 +7,10 @@
   width: 800px;
   height: 450px;
 }
+#photo-viewer .photo-box img {
+  border: 2px solid black;
+  border-radius: 10px;
+}
 #photo-viewer .photo-box.is-loading::after {
   content: "Loading...";
   position: absolute;
@@ -26,5 +30,10 @@
   width: 80px;
   height: 45px;
 }
-#photo-viewer .thumbnail-anchor img.active {
+#photo-viewer .active img {
+  border: 2px solid blue;
+  border-radius: 8px;
+}
+.photo-thumbnails {
+  margin-top: 1em;
 }
