@@ -1,0 +1,51 @@
+[
+  {
+    "firstName": "Ricky",
+    "lastName": "LaFleur",
+    "gender": "Male",
+    "hairColour": "Blonde",
+    "occupation": "Unemployed"
+  },
+  {
+    "firstName": "Julian",
+    "lastName": "Tremblay",
+    "gender": "Male",
+    "hairColour": "Black",
+    "occupation": "Criminal"
+  },
+  {
+    "firstName": "Bubbles",
+    "lastName": "Smith",
+    "gender": "Male",
+    "hairColour": "Red",
+    "occupation": "Businessman"
+  },
+  {
+    "firstName": "Jim",
+    "lastName": "Lahey",
+    "gender": "Male",
+    "hairColour": "Grey",
+    "occupation": "Trailer Park Supervisor"
+  },
+  {
+    "firstName": "Randy",
+    "lastName": "Bobandy",
+    "gender": "Male",
+    "hairColour": "Black",
+    "occupation": "Assistant Trailer Park Supervisor"
+  },
+  {
+    "firstName": "Lucy",
+    "lastName": "DeCoutere",
+    "gender": "Female",
+    "hairColour": "Blonde",
+    "occupation": "Stay at Home Mother"
+  },
+  {
+    "firstName": "Ray",
+    "lastName": "LaFleur",
+    "gender": "Male",
+    "hairColour": "Brown",
+    "occupation": "Truck Driver"
+  }
+]
