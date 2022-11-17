@@ -9,7 +9,10 @@ $(function () {
         $search.on('keyup',searchName);
     }
 
-    function loadCharacters(filter) {
+    $('#firstHalf').on('click', sortFirstHalf);
+    $('#lastHalf').on('click', sortLastHalf);
+
+    function loadCharacters() {
         $(function ($) {
             $.ajax({
                 type: "POST",
@@ -18,7 +21,6 @@ $(function () {
                 dataType: 'json',
                 success: function (data) {
                     loadTable(data);
-
                 }
             });
         })
@@ -48,7 +50,7 @@ $(function () {
             "background": "none",
             "color": "black"
         });
-        if (query != "")    // if search query is not empty then change colour of matching rows
+        if (query !== "")    // if search query is not empty then change colour of matching rows
         {
             $('.first:contains(' + query + ')').each(function (i) {
                 console.log(this);
@@ -58,11 +60,22 @@ $(function () {
                 });
             });
         }
-
-
         console.log(query);
         console.log(cache);
+    }
 
+    function sortFirstHalf() {
+        $('.last').parent().hide();
+        $('.last').filter(function () {
+            return $(this).text().match(/([A-M])/);
+        }).parent().show();
+    }
+
+    function sortLastHalf() {
+        $('.last').parent().hide();
+        $('.last').filter(function () {
+            return $(this).text().match(/([N-Z])/);
+        }).parent().show();
     }
 
 })
