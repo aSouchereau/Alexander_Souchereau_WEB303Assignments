@@ -1,8 +1,0 @@
-.modal {
-    position:absolute;
-    z-index: 1000;
-    padding: 1em;
-    box-sizing: border-box;
-    overflow: auto;
-    box-shadow: black 0 0 200px;
-}
