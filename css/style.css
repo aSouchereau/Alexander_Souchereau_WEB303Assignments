@@ -2,3 +2,8 @@
     background: darkgreen;
     color: white;
 }
+
+th a {
+    cursor: pointer;
+    user-select: none;
+}
