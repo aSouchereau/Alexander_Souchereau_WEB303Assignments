@@ -23,6 +23,7 @@ $(function () {
                 dataType: 'json',
                 success: function (data) {
                     loadTable(data);
+                    loadTableSorter();
                 }
             });
         })
@@ -116,56 +117,63 @@ $(function () {
         }
     };
 
-    $('.sortable').each(function () {
-        let $controls = $('.sortable th')
-        // Define sorting icons
-        let $ascIcon = $('.asc-ico');
-        let $descIcon = $('.desc-ico');
-        $descIcon.hide();
-        $ascIcon.invisible();
+    function loadTableSorter() {
+        $('.sortable').each(function () {
+            let $controls = $('.sortable th')
+            let originalRows = $('tbody tr').toArray();
+            console.log(originalRows);
+            // Define sorting icons
+            let $ascIcon = $('.asc-ico');
+            let $descIcon = $('.desc-ico');
+            $descIcon.hide();
+            $ascIcon.invisible();
 
-        $controls.on('click', function () {
-            let $table = $('table');
-            let $tbody = $('tbody');
-            let $buttons = $('th');
-            let rows = $('tbody tr').toArray();
-
-            let $header = $(this);
-            let order = $header.data('sort');
-            let column;
+            $controls.on('click', function () {
+                let $tbody = $('tbody');
+                let $buttons = $('th');
+                let rows = $('tbody tr').toArray();
 
 
-            if ($header.is('.asc')) {
-                $header.toggleClass('asc desc');
-                $tbody.append(rows.reverse());
+                let $header = $(this);
+                let order = $header.children('a').data('sort');
+                let column;
 
-                $header.find($ascIcon).hide();
-                $header.find($descIcon).show();
-                $header.find($descIcon).visible();
-            } else if ($header.is('.desc')) {
-                $header.removeClass('desc');
-                $header.siblings().removeClass('asc desc');
 
-                $header.find($descIcon).hide();
-                $header.find($ascIcon).show();
-                $header.find($ascIcon).invisible();
-            } else {
-                $header.addClass('asc');
-                $header.siblings().removeClass('asc desc');
+                if ($header.is('.asc')) {
+                    $header.toggleClass('asc desc');
+                    $tbody.append(rows.reverse());
 
-                if (comparison.hasOwnProperty(order)){
-                    column = $buttons.index(this);
-                    rows.sort(function(a,b){
-                        a = $(a).find('td').eq(column).text();
-                        b = $(b).find('td').eq(column).text();
-                        console.log('a: ',a,'   b: ', b)
-                        return  comparison[order](a,b);
-                    });
-                    $tbody.append(rows);
+                    $header.find($ascIcon).hide();
+                    $header.find($descIcon).show();
+                    $header.find($descIcon).visible();
+                } else if ($header.is('.desc')) {
+                    $header.removeClass('desc');
+                    $header.siblings().removeClass('asc desc');
+
+                    $tbody.empty().append(originalRows);
+
+                    $header.find($descIcon).hide();
+                    $header.find($ascIcon).show();
+                    $header.find($ascIcon).invisible();
+                } else {
+                    $header.addClass('asc');
+                    $header.siblings().removeClass('asc desc');
+
+                    if (comparison.hasOwnProperty(order)){
+                        column = $buttons.index(this);
+                        rows.sort(function(a,b){
+                            a = $(a).find('td').eq(column).text();
+                            b = $(b).find('td').eq(column).text();
+                            console.log('a: ',a,'   b: ', b)
+                            return  comparison[order](a,b);
+                        });
+                        $tbody.append(rows);
+                    }
+                    $header.find($descIcon).hide();
+                    $header.find($ascIcon).visible();
                 }
-                $header.find($descIcon).hide();
-                $header.find($ascIcon).visible();
-            }
+            });
         });
-    });
+    }
+
 })
