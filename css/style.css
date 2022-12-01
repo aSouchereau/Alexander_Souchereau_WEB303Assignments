@@ -1,0 +1,27 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper {
+    width: 40vw;
+    margin: 0 auto;
+    padding: 5vh 2vw 7vh;
+    background: lightgrey;
+    box-sizing: border-box;
+}
+
+label {
+    margin: 1vh;
+    font-weight: bold;
+}
+input {
+    display: block;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}

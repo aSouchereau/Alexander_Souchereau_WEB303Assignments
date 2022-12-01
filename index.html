@@ -9,29 +9,33 @@
         Alex Souchereau
     </h1>
 
-    <form action="/register" method="post">
-        <label for="username">
-            Username
-            <input type="text" name="username" id="username" placeholder="Username"/>
-        </label>
-        <label for="password">
-            Password
-            <input type="hidden" name="password" id="password" placeholder="Password" />
-        </label>
-        <label for="confirmPassword">
-            Confirm Password
-            <input type="hidden" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" />
-        </label>
-        <label for="terms">
-            <input type="checkbox" name="terms" id="terms" />
-            I accept the terms of service
-        </label>
-        <label for="country">
-            <select name="country" id="country">
-                <option selected="selected">Select Your Country</option>
-            </select>
-        </label>
-    </form>
+    <div class="form-wrapper">
+        <form action="/register" method="post">
+            <label for="username">
+                Username
+                <input type="text" name="username" id="username" placeholder="Username"/>
+            </label>
+            <label for="password">
+                Password
+                <input type="password" name="password" id="password" placeholder="Password" />
+            </label>
+            <label for="confirmPassword">
+                Confirm Password
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" />
+            </label>
+            <label for="terms">
+                <input type="checkbox" name="terms" id="terms" />
+                I accept the terms of service
+            </label>
+            <label for="country">
+                <select name="country" id="country">
+                    <option selected="selected" value="unselected">Select Your Country</option>
+                </select>
+            </label>
+            <input type="submit" name="submit" value="Sign Up">
+        </form>
+    </div>
+
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/countries.js"></script>
