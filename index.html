@@ -6,10 +6,35 @@
 
 <body>
     <h1>
-        <!-- your name goes here -->
+        Alex Souchereau
     </h1>
 
+    <form action="/register" method="post">
+        <label for="username">
+            Username
+            <input type="text" name="username" id="username" placeholder="Username"/>
+        </label>
+        <label for="password">
+            Password
+            <input type="hidden" name="password" id="password" placeholder="Password" />
+        </label>
+        <label for="confirmPassword">
+            Confirm Password
+            <input type="hidden" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" />
+        </label>
+        <label for="terms">
+            <input type="checkbox" name="terms" id="terms" />
+            I accept the terms of service
+        </label>
+        <label for="country">
+            <select name="country" id="country">
+                <option selected="selected">Select Your Country</option>
+            </select>
+        </label>
+    </form>
+
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/countries.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
